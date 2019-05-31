@@ -1,15 +1,16 @@
 <template>
-  <div class="home">hello I`m Home.vue</div>
+  <home-header></home-header>
 </template>
 
 <script>
+import HomeHeader from './components/homeHeader'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 }
 </script>
 
 <style>
-    .home{
-        font-size: 30px;
-    }
 </style>
