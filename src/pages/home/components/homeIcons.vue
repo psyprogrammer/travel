@@ -52,6 +52,8 @@ export default {
 
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
+  .wrapper
+    margin-top: .3rem
   .wrapper >>> .swiper-container
     width: 100%
     height: 0
