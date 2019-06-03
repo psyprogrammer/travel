@@ -4,31 +4,13 @@
       <span class="heart iconfont">&#xe602;</span>
       周末去哪儿
       </div>
-    <div class="like-item border-bottom">
+    <div class="like-item border-bottom" v-for="item in weekendList" :key="item.id">
       <div class="img-panel">
-        <img class="image" src="http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg">
+        <img class="image" :src="item.imgUrl">
       </div>
       <div class="main-info">
-        <p class="title">故宫</p>
-        <p class="description">德智体美劳全面发展的亲子日，这些地方该去看看…</p>
-      </div>
-    </div>
-    <div class="like-item border-bottom">
-      <div class="img-panel">
-        <img class="image" src="http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg">
-      </div>
-      <div class="main-info">
-        <p class="title">故宫</p>
-        <p class="description">世界五大宫之首，穿越与您近在咫尺</p>
-      </div>
-    </div>
-    <div class="like-item border-bottom">
-      <div class="img-panel">
-        <img class="image" src="http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg">
-      </div>
-      <div class="main-info">
-        <p class="title">故宫</p>
-        <p class="description">数百年的宫廷庙宇，至今依旧威严霸气</p>
+        <p class="title">{{item.title}}</p>
+        <p class="description">{{item.desc}}</p>
       </div>
     </div>
   </div>
@@ -36,7 +18,10 @@
 
 <script>
 export default {
-  name: 'HomeWeekend'
+  name: 'HomeWeekend',
+  props: {
+    weekendList: Array
+  }
 }
 </script>
 

@@ -4,51 +4,19 @@
       <span class="heart iconfont">&#xe602;</span>
       猜你喜欢
       </div>
-    <div class="like-item border-bottom">
+    <div class="like-item border-bottom" v-for="item in recommendList" :key="item.id">
       <div class="img-panel">
-        <img class="image" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg">
+        <img class="image" :src="item.imgUrl">
       </div>
       <div class="main-info">
-        <p class="title">故宫</p>
+        <p class="title">{{item.title}}</p>
         <div class="star iconfont">&#xe601;&#xe601;&#xe601;&#xe601;&#xe601;</div>
         <div class="price">
           <span class="rmb iconfont">&#xe603;</span>
           <span class="num">60</span>
           <span class="qi">起</span>
         </div>
-        <p class="description">世界五大宫之首，穿越与您近在咫尺</p>
-      </div>
-      <span class="location">东城区</span>
-    </div>
-    <div class="like-item border-bottom">
-      <div class="img-panel">
-        <img class="image" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg">
-      </div>
-      <div class="main-info">
-        <p class="title">故宫</p>
-        <div class="star iconfont">&#xe601;&#xe601;&#xe601;&#xe601;&#xe601;</div>
-        <div class="price">
-          <span class="rmb iconfont">&#xe603;</span>
-          <span class="num">60</span>
-          <span class="qi">起</span>
-        </div>
-        <p class="description">世界五大宫之首，穿越与您近在咫尺</p>
-      </div>
-      <span class="location">东城区</span>
-    </div>
-    <div class="like-item border-bottom">
-      <div class="img-panel">
-        <img class="image" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg">
-      </div>
-      <div class="main-info">
-        <p class="title">故宫</p>
-        <div class="star iconfont">&#xe601;&#xe601;&#xe601;&#xe601;&#xe601;</div>
-        <div class="price">
-          <span class="rmb iconfont">&#xe603;</span>
-          <span class="num">60</span>
-          <span class="qi">起</span>
-        </div>
-        <p class="description">世界五大宫之首，穿越与您近在咫尺</p>
+        <p class="description">{{item.desc}}</p>
       </div>
       <span class="location">东城区</span>
     </div>
@@ -57,7 +25,10 @@
 
 <script>
 export default {
-  name: 'HomeRecommend'
+  name: 'HomeRecommend',
+  props: {
+    recommendList: Array
+  }
 }
 </script>
 

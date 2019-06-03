@@ -8,7 +8,7 @@
         输入城市/游玩/酒店
         </div>
     <div class="header-right">
-        城市
+        {{this.city}}
         <span class="iconfont arrow-icon">&#xe600;</span>
         </div>
   </div>
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -47,6 +50,7 @@ export default {
       width: 1.24rem
       float: right
       text-align: center
+      font-size: .33rem
       .arrow-icon
         font-size: .24rem
         margin-left: -0.05rem
