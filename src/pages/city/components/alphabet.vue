@@ -60,7 +60,6 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/variables.styl'
   .alphabet
-    background: red
     width: .4rem
     position: absolute
     right: .1rem
