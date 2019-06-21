@@ -1,8 +1,10 @@
 <template>
   <div class="header">
+    <router-link to="/demo">
     <div class="header-left">
         <div class="iconfont back-icon">&#xe624;</div>
     </div>
+    </router-link>
     <div class="header-input">
         <span class="iconfont">&#xe632;</span>
         输入城市/游玩/酒店

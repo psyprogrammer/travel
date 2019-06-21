@@ -21,8 +21,8 @@ export default {
   },
   data () {
     return {
-      keyword: '',
-      list: [],
+      keyword: '',// 输入
+      list: [],// 搜索结果
       timer: null
     }
   },
@@ -35,18 +35,23 @@ export default {
     this.scroll = new Bscroll(this.$refs.search)
   },
   watch: {
+    // 监控输入
     keyword () {
       if (this.timer) {
         clearTimeout(this.timer)
       }
+      // 没有输入值，则将结果列表清空
       if (!this.keyword) {
         this.list = []
         return
       }
       this.timer = setTimeout(() => {
         const result = []
+        // i指的是城市首字母
         for (let i in this.cities) {
+          // 遍历同一首字母的城市数组
           this.cities[i].forEach((value) => {
+            // indexOf用来检索value里面有没有keyword，有，返回第一次检索到的位置；没有，返回-1
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
               result.push(value)
             }
