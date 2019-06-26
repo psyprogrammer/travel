@@ -12,4 +12,3 @@ export default {
   h3
     color: red
 </style>
-

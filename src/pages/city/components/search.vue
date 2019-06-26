@@ -22,8 +22,8 @@ export default {
   },
   data () {
     return {
-      keyword: '',// 输入
-      list: [],// 搜索结果
+      keyword: '', // 输入
+      list: [], // 搜索结果
       timer: null
     }
   },
