@@ -1,22 +1,40 @@
 <template>
-  <div class="wrapper">
-    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1707/a3/a3924161475dee37a3.img.jpg_600x330_67fe57ba.jpg">
-    <div class="desc">
-      <div class="desc-info">青岛海昌极地海洋世界(AAAA景区)</div>
-      <div class="desc-number">
-        <span class="iconfont img-icon">&#xeb23;</span>
-        123
+  <div class="container">
+    <div class="wrapper">
+      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1707/a3/a3924161475dee37a3.img.jpg_600x330_67fe57ba.jpg" @click="ifshow">
+      <div class="desc">
+        <div class="desc-info">青岛海昌极地海洋世界(AAAA景区)</div>
+        <div class="desc-number">
+          <span class="iconfont img-icon">&#xeb23;</span>
+          123
+        </div>
       </div>
+      <router-link tag="div" class="back" to="/">
+        <div class="iconfont back-icon">&#xe624;</div>
+      </router-link>
     </div>
-    <router-link tag="div" class="back" to="/">
-      <div class="iconfont back-icon">&#xe624;</div>
-    </router-link>
+    <common-gallary :imgs="imgs" v-show="showGallary" @close="ifshow"></common-gallary>
   </div>
 </template>
 
 <script>
+import commonGallary from 'commons/gallary/Gallary'
 export default {
-  name: 'detailBanner'
+  name: 'detailBanner',
+  data () {
+    return {
+      showGallary: false,
+      imgs: ['http://img1.qunarzz.com/sight/p0/1901/7e/7e98eec1b8f27b6ea3.water.jpg_r_800x800_c24adf2a.jpg','http://img1.qunarzz.com/sight/p0/1707/a3/a3924161475dee37a3.img.jpg_r_800x800_1a4dad49.jpg']
+    }
+  },
+  methods: {
+    ifshow () {
+      this.showGallary = !this.showGallary
+    }
+  },
+  components: {
+    commonGallary
+  }
 }
 </script>
 

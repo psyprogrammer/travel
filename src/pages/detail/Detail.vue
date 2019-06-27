@@ -1,5 +1,7 @@
 <template>
-  <detail-banner></detail-banner>
+  <div class="wrapper">
+    <detail-banner></detail-banner>
+  </div>
 </template>
 
 <script>
