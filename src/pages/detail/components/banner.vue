@@ -9,9 +9,6 @@
           123
         </div>
       </div>
-      <router-link tag="div" class="back" to="/">
-        <div class="iconfont back-icon">&#xe624;</div>
-      </router-link>
     </div>
     <common-gallary :imgs="imgs" v-show="showGallary" @close="ifshow"></common-gallary>
   </div>
@@ -71,17 +68,4 @@ export default {
         font-size: .25rem
         .img-icon
           font-size: .34rem
-    .back
-      position: absolute
-      width: .8rem
-      height: .8rem
-      line-height: .8rem
-      background: rgba(0,0,0,0.4)
-      border-radius: 50%
-      top: .2rem
-      left: .2rem
-      .back-icon
-        color: #ffffff
-        font-size: .4rem
-        text-align: center
 </style>
