@@ -37,8 +37,11 @@ export default {
       }
     }
   },
-  activated () {
+  activated () {  // 当该组件激活时调用
     window.addEventListener("scroll", this.handleScroll)
+  },
+  deactivated () {  // 当该组件停用时调用 （避免该方法污染其他组件）
+    window.removeEventListener("scroll", this.handleScroll)
   }
 }
 </script>
