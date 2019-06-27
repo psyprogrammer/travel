@@ -1,0 +1,69 @@
+<template>
+  <div class="wrapper">
+    <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1707/a3/a3924161475dee37a3.img.jpg_600x330_67fe57ba.jpg">
+    <div class="desc">
+      <div class="desc-info">青岛海昌极地海洋世界(AAAA景区)</div>
+      <div class="desc-number">
+        <span class="iconfont img-icon">&#xeb23;</span>
+        123
+      </div>
+    </div>
+    <router-link tag="div" class="back" to="/">
+      <div class="iconfont back-icon">&#xe624;</div>
+    </router-link>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'detailBanner'
+}
+</script>
+
+<style lang="stylus" scoped>
+  .wrapper
+    overflow: hidden
+    height: 0
+    padding-bottom: 55%
+    position: relative
+    .banner-img
+      width: 100%
+    .desc
+      height: .6rem
+      line-height: .6rem
+      display: flex
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      padding: 0 .15rem
+      padding-bottom: .16rem
+      color: #fff
+      background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5))
+      .desc-info
+        flex: 1
+        font-size: .36rem
+      .desc-number
+        height: .4rem
+        line-height: .4rem
+        padding: 0 .3rem
+        margin-top: .08rem
+        background: rgba(0, 0, 0, 0.4)
+        border-radius: .2rem
+        font-size: .25rem
+        .img-icon
+          font-size: .34rem
+    .back
+      position: absolute
+      width: .8rem
+      height: .8rem
+      line-height: .8rem
+      background: rgba(0,0,0,0.4)
+      border-radius: 50%
+      top: .2rem
+      left: .2rem
+      .back-icon
+        color: #ffffff
+        font-size: .4rem
+        text-align: center
+</style>

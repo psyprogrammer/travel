@@ -53,12 +53,12 @@ export default {
       }
     }
   },
-  mounted () {  //只在初次加载时调用
+  mounted () { // 只在初次加载时调用
     this.lastCity = this.city
     this.getHomeInfo()
   },
-  activated () {  //每次重新加载时会调用
-    if (this.lastCity !== this.city ) { //当选择的城市与当前的城市不一致时
+  activated () { // 每次重新加载时会调用
+    if (this.lastCity !== this.city ){ // 当选择的城市与当前的城市不一致时
       this.lastCity = this.city
       this.getHomeInfo()
     }

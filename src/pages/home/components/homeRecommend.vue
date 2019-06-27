@@ -3,23 +3,31 @@
     <div class="header">
       <span class="heart iconfont">&#xe602;</span>
       猜你喜欢
-      </div>
-    <div class="like-item border-bottom" v-for="item in recommendList" :key="item.id">
-      <div class="img-panel">
-        <img class="image" :src="item.imgUrl">
-      </div>
-      <div class="main-info">
-        <p class="title">{{item.title}}</p>
-        <div class="star iconfont">&#xe601;&#xe601;&#xe601;&#xe601;&#xe601;</div>
-        <div class="price">
-          <span class="rmb iconfont">&#xe603;</span>
-          <span class="num">60</span>
-          <span class="qi">起</span>
-        </div>
-        <p class="description">{{item.desc}}</p>
-      </div>
-      <span class="location">东城区</span>
     </div>
+    <ul>
+      <router-link 
+        tag="li" 
+        class="like-item border-bottom" 
+        v-for="item in recommendList" 
+        :key="item.id" 
+        :to= "'/detail/'+item.id"
+        >
+        <div class="img-panel">
+          <img class="image" :src="item.imgUrl">
+        </div>
+        <div class="main-info">
+          <p class="title">{{item.title}}</p>
+          <div class="star iconfont">&#xe601;&#xe601;&#xe601;&#xe601;&#xe601;</div>
+          <div class="price">
+            <span class="rmb iconfont">&#xe603;</span>
+            <span class="num">60</span>
+            <span class="qi">起</span>
+          </div>
+          <p class="description">{{item.desc}}</p>
+        </div>
+        <span class="location">东城区</span>
+      </router-link>
+    </ul>
   </div>
 </template>
 
