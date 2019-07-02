@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <router-link tag="div" class="back" to="/" v-show="ifshow">
       <div class="iconfont back-icon">&#xe624;</div>
     </router-link>
@@ -9,7 +9,6 @@
         <div class="iconfont back-icon">&#xe624;</div>
       </router-link>
     </div>
-    <div class="content"></div>
   </div>
 </template>
 
@@ -48,7 +47,6 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/variables.styl'
-  .container
     .back
       position: absolute
       width: .8rem
@@ -63,6 +61,7 @@ export default {
         font-size: .4rem
         text-align: center
     .wrapper
+      z-index: 2
       position: fixed
       top: 0
       left: 0
@@ -79,6 +78,4 @@ export default {
         top: 0
         font-size: .4rem
         color: #fff
-    .content
-      height: 50rem
 </style>

@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="ifshow"></common-gallary>
+    <common-gallary class="gallary" :imgs="imgs" v-show="showGallary" @close="ifshow"></common-gallary>
   </div>
 </template>
 
@@ -36,6 +36,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+  .gallary
+    z-index: 99
   .wrapper
     overflow: hidden
     height: 0
